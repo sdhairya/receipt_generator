@@ -85,7 +85,7 @@ class _bodyState extends State<body> {
                                     SizedBox(height: 8),
                                     components().text("Script all DNA",
                                         FontWeight.bold, Colors.black87, 18),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 5,
                                     ),
                                     components().text(
@@ -97,7 +97,7 @@ class _bodyState extends State<body> {
                                         FontWeight.normal, Colors.black45, 10),
                                     components().text("Ahmedabad, 380060 ",
                                         FontWeight.normal, Colors.black45, 10),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 3,
                                     ),
                                     components().text("1234567890",
@@ -246,7 +246,7 @@ class _bodyState extends State<body> {
                                                   FontWeight.normal,
                                                   Colors.black87,
                                                   11),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 2,
                                               ),
                                               components().text(
@@ -265,7 +265,7 @@ class _bodyState extends State<body> {
                                                   FontWeight.normal,
                                                   Colors.black87,
                                                   11),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 2,
                                               ),
                                               components().text(
@@ -280,7 +280,7 @@ class _bodyState extends State<body> {
                                     )
                                   ],
                                 )),
-                            Divider(
+                            const Divider(
                                 height: 1, color: Colors.grey, thickness: 1),
                             Container(
                               padding: EdgeInsets.only(top: 2, bottom: 2),
@@ -296,7 +296,7 @@ class _bodyState extends State<body> {
                                             FontWeight.normal,
                                             Colors.black45,
                                             11),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 2,
                                         ),
                                         components().text(
@@ -304,7 +304,7 @@ class _bodyState extends State<body> {
                                             FontWeight.normal,
                                             Colors.black45,
                                             11),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 2,
                                         ),
                                         components().text(
@@ -323,7 +323,7 @@ class _bodyState extends State<body> {
                                             FontWeight.normal,
                                             Colors.black45,
                                             11),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 14,
                                         ),
                                         components().text(
@@ -331,7 +331,7 @@ class _bodyState extends State<body> {
                                             FontWeight.normal,
                                             Colors.black45,
                                             11),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 2,
                                         ),
                                         components().text(
@@ -350,7 +350,7 @@ class _bodyState extends State<body> {
                                             FontWeight.normal,
                                             Colors.black45,
                                             11),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 2,
                                         ),
                                         components().text(
@@ -358,7 +358,7 @@ class _bodyState extends State<body> {
                                             FontWeight.normal,
                                             Colors.black45,
                                             11),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 2,
                                         ),
                                         components().text(
@@ -372,7 +372,7 @@ class _bodyState extends State<body> {
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                                 height: 1, color: Colors.grey, thickness: 1),
                             Padding(
                               padding:
@@ -389,7 +389,7 @@ class _bodyState extends State<body> {
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                                 height: 1, color: Colors.grey, thickness: 1),
                             Container(
                               padding:
@@ -400,7 +400,7 @@ class _bodyState extends State<body> {
                                 children: [
                                   components().text("Delivery Details",
                                       FontWeight.normal, Colors.black87, 12),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 3,
                                   ),
                                   Row(
@@ -418,7 +418,7 @@ class _bodyState extends State<body> {
                                             Colors.black45,
                                             11),
                                       ]),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 3,
                                   ),
                                   components().text(
@@ -426,7 +426,7 @@ class _bodyState extends State<body> {
                                       FontWeight.normal,
                                       Colors.black45,
                                       11),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 3,
                                   ),
                                   components().text(
@@ -480,13 +480,13 @@ class _bodyState extends State<body> {
                                 ],
                               ),
                             ),
-                            DottedLine(
+                            const DottedLine(
                               direction: Axis.horizontal,
                               dashColor: Colors.black,
                               dashGapColor: Colors.white,
                               dashGapLength: 2.0,
                             ),
-                            SizedBox(height: 2,)
+                            const SizedBox(height: 2,)
                           ],
                         ),
                       ),
