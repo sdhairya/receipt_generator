@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:bluetooth_print/bluetooth_print.dart';
 import 'package:bluetooth_print/bluetooth_print_model.dart';
+import 'package:printing/printing.dart';
 
 import '../viewReceipt/previewScreen.dart';
 
@@ -75,11 +76,13 @@ class _bluetoothDevicesScreenState extends State<bluetoothDevicesScreen> {
           itemCount: _devices.length,
 
           itemBuilder: (c, i) {
+            print(_devices[i].name.toString() + "\nAddress: "+ _devices[i].address.toString()+"\ntype: "+ _devices[i].type.toString()+"\n connected: "+_devices[i].connected.toString() );
             return ListTile(
               leading: Icon(Icons.print),
               title: Text(_devices[i].name.toString()),
               subtitle: Text(_devices[i].address.toString()),
               onTap: () {
+                bluetoothPrint.stopScan();
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => previewScreen(device: _devices[i], bytes: widget.bytes, list: widget.list,)));
                 // _startPrint(_devices[i]);

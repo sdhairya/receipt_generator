@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:receipt_generator/resturantsLists/resturantsLists.dart';
+import 'package:receipt_generator/supabasehandler.dart';
 import 'package:receipt_generator/viewReceipt/viewReceipt.dart';
+import 'package:supabase/supabase.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    return viewReceipt();
+    return resturantsLists();
   }
 }

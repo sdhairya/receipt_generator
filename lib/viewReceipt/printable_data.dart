@@ -106,7 +106,7 @@ buildPrintableData(date, time, list) => pw.Center(
             pw.Divider(height: 1, color: PdfColors.grey500, thickness: 1),
             pw.Container(
               padding: pw.EdgeInsets.only(top: 3, bottom: 3),
-              child: buildListWithScroll(list),
+              // child: buildListWithScroll(list),
             ),
             pw.Divider(height: 1, color: PdfColors.grey500, thickness: 1),
             pw.Container(
@@ -313,43 +313,43 @@ buildPrintableData(date, time, list) => pw.Center(
       ),
     );
 
-pw.Widget buildListWithScroll(List<receiptData> list) {
-  return pw.Column(
-    children: list.map((e) => buildList(e)).toList(),
-  );
-}
-
-pw.Widget buildList(receiptData element) {
-  return pw.Container(
-    padding: pw.EdgeInsets.only(top: 2, bottom: 2),
-    child: pw.Row(
-      mainAxisAlignment: pw.MainAxisAlignment.spaceEvenly,
-      children: [
-        pw.Container(
-          child: pw.Column(
-            children: [
-              components().pwtext(element.itemName, pw.FontWeight.normal,
-                  PdfColors.grey900, 11),
-            ],
-          ),
-        ),
-        pw.Container(
-          child: pw.Column(
-            children: [
-              components().pwtext(element.quantity.toString(),
-                  pw.FontWeight.normal, PdfColors.grey900, 11),
-            ],
-          ),
-        ),
-        pw.Container(
-          child: pw.Column(
-            children: [
-              components().pwtext(element.price.toString(),
-                  pw.FontWeight.normal, PdfColors.grey900, 11),
-            ],
-          ),
-        )
-      ],
-    ),
-  );
-}
+// pw.Widget buildListWithScroll(List<receiptData> list) {
+//   return pw.Column(
+//     children: list.map((e) => buildList(e)).toList(),
+//   );
+// }
+//
+// pw.Widget buildList(receiptData element) {
+//   return pw.Container(
+//     padding: pw.EdgeInsets.only(top: 2, bottom: 2),
+//     child: pw.Row(
+//       mainAxisAlignment: pw.MainAxisAlignment.spaceEvenly,
+//       children: [
+//         pw.Container(
+//           child: pw.Column(
+//             children: [
+//               components().pwtext(element.itemName, pw.FontWeight.normal,
+//                   PdfColors.grey900, 11),
+//             ],
+//           ),
+//         ),
+//         pw.Container(
+//           child: pw.Column(
+//             children: [
+//               components().pwtext(element.quantity.toString(),
+//                   pw.FontWeight.normal, PdfColors.grey900, 11),
+//             ],
+//           ),
+//         ),
+//         pw.Container(
+//           child: pw.Column(
+//             children: [
+//               components().pwtext(element.price.toString(),
+//                   pw.FontWeight.normal, PdfColors.grey900, 11),
+//             ],
+//           ),
+//         )
+//       ],
+//     ),
+//   );
+// }

@@ -29,18 +29,7 @@ class previewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          // body: bytes != null ? Image.memory(bytes) : Container(),
-          // bottomSheet: ElevatedButton(
-          //   style: ElevatedButton.styleFrom(
-          //       minimumSize: Size(100, 60),
-          //       shape: RoundedRectangleBorder(
-          //           borderRadius: BorderRadius.circular(18.0),
-          //           side: BorderSide(color: Colors.blue))),
-          //   child: Text("Print", style: TextStyle(fontSize: 20)),
-          //   onPressed: () {
-          //     _startPrint(device);
-          //   },
-          // ),
+
           appBar: AppBar(
             leading: InkWell(
               child: Icon(Icons.arrow_back_ios_new),
@@ -64,16 +53,6 @@ class previewScreen extends StatelessWidget {
             ],
           ),
           body: Image.memory(bytes)
-          // PdfPreview(
-          //   build: (format) => doc.save(),
-          //   allowSharing: false,
-          //   dynamicLayout: true,
-          //   allowPrinting: false,
-          //   canChangePageFormat: false,
-          //   initialPageFormat: PdfPageFormat.roll80,
-          //   pdfFileName: "doc.pdf",
-          // ),
-
           ),
     );
   }
@@ -82,8 +61,10 @@ class previewScreen extends StatelessWidget {
     List<List> queue = [];
     queue.add(list);
     final BluetoothPrint bluetoothPrint = BluetoothPrint.instance;
+
     if (device != null && device.address != null) {
       await bluetoothPrint.connect(device);
+      // print(bluetoothPrint.);
 
       print(device.name.toString());
       print(device.address.toString());
@@ -100,15 +81,16 @@ class previewScreen extends StatelessWidget {
 
             break;
           default:
-            print("Other bluetooth device error");
+            print("Other bluetooth device error: "+ BluetoothPrint.NAMESPACE);
             break;
         }
       });
 
       Map<String, dynamic> config = Map();
-      for (var i in queue) {
-        await bluetoothPrint.printReceipt(config, list);
-      }
+      // for (var i in queue) {
+      //   await bluetoothPrint.printReceipt(config, list);
+      //   bluetoothPrint.
+      // }
       queue= [];
 
     }
